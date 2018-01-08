@@ -1,0 +1,114 @@
+			<!-- begin responsive main banner 
+                include file \assets\includes\common\home-internetcx-main-banner-block-responsive.html -->
+ 
+				<style type="text/css">
+					div.desktop-banner-wrapper {
+						padding-left : 15px;
+					}
+					
+					div.phone-banner-wrapper {
+						padding-left : 10px;
+					}
+					
+					#primary-offer-standard-content-group,#secondary-offer-1,#secondary-offer-2,#secondary-offer-3{
+						cursor:auto;
+					}
+				</style>
+ 
+
+				<div id="header-primary-separator" class="container">
+                    <h1 class="terse-product-label">Internet</h1>
+                    <div id="already-link-wrapper" class="hidden-xs">
+                        <a id="internet-main-offer-four-tab-already-customer"  class="already-customer already-customer-link hidden-xs pull-right" clicktrack="ctl|rsd|shop|cx|pre_id_learn|link|already_a_customer" href="<!--#echo var="ctlmyacct_url"-->/eam/entryPoint.do">Already a customer?</a>
+                    </div>
+				</div>
+ 
+				<div id="primary-offer" class="container">
+					<div id="primary-offer-standard-content-group" class="primary-main-copy-wrapper">	
+						<div id="plcw" class="primary-left-copy-wrapper">
+                            <div class="primary-left-copy">
+                                <div class="plcHeading">
+                                    <p><b>HIGH-SPEED INTERNET</b></p>
+                                </div>
+								<div class="plcMiddle">
+									<div class="plcMiddleLeft">
+										<div class="plcMiddleLeftGroup">
+											<p class="plcCTL">Introducing Price For Life</p>
+										</div>
+									</div>
+									<div class="plcMiddleRight">
+										<p class="plcNoContract">NO CONTRACT</p>
+										<p class="plcNoPromo">NO RATE HIKES</p>
+										<p class="plcNoCancel">NO BUNDLING NEEDED</p>
+									</div>
+								</div>
+								<div class="plcDetails">
+									<p class="plcDeets">Get <b>Fast Internet</b> for as little as <b>$45 a month.</b> Speeds up to 20 Mbps.</p>
+									<p class="plcFinePrint">Keep your Internet price as long as you keep your Price For Life plan. Prepay may be available. Rate excludes taxes; activation fee applies. Speed may not be available in your area. <a class="promo-details-modal-trigger offerDetails" alt="Offer Details" href="/home/hidden/modals/offer-product-details.html#high_speed_internet" onclick="return false;">Offer Details.</a></p>
+								</div>
+								<div class="primary-main-cta-wrapper">
+									<a href="/home/internet/cx/ctap/" id="hp-internetcx-btn" clicktrack="ctl|rsd|shop|cx|pre_id_learn|top|button|get_started_now" class="NewCtaButton">Start Now ></a>
+								</div>
+								<span id ="internet_OfferDetailsens"></span>								
+                            </div>							
+						</div>
+						<div id="plcwxs" class="primary-left-copy-wrapper-xs">
+							<div class="primary-info-container">
+								<p class="picIntro">Introducing</br>Price For Life</p>
+								<div class="picNo">
+									<p class="picNoContract">NO CONTRACT</p>
+									<p class="picNoPromo">NO RATE HIKES</p>
+									<p class="picNoCancel">NO BUNDLING NEEDED</p>
+								</div>
+								<div class="primary-main-cta-wrapper visible-xs">
+									<a id="hp-internetcx-btn" clicktrack="ctl|rsd|shop|cx|pre_id_learn|top|button|get_started_now" class="NewCtaButton" href="/home/internet/cx/ctap/">Start Now ></a>
+								</div>
+								<p class="picAvailable">Get <b>Fast Internet</b> for as little as <b>$45 a month.</b></br>Speeds up to 20 Mbps.</b></p>
+								<div class="primary-speed-container" id="pscmdxs">
+									<p class="plcFinePrint">Keep your Internet price as long as you keep your Price For Life plan. Prepay may be available. Rate excludes taxes; activation fee applies. Speed may not be available in your area. <a class="promo-details-modal-trigger offerDetails" alt="Offer Details" href="/home/hidden/modals/offer-product-details.html#high_speed_internet" onclick="return false;">Offer Details.</a></p>
+								</div>
+							</div>
+						</div>	
+					</div>				
+					<div class="otherProducts">
+						<p>Looking for other products or to bundle your internet service? 
+						<a href="/home/phone/" alt="Home Phone" clicktrack="ctl|rsd|shop|cx|pre_id_learn|middle_high|link|home_phone">Home Phone</a>  |  
+						<a href="/home/tv/" alt="TV" clicktrack="ctl|rsd|shop|cx|pre_id_learn|middle_high|link|tv">TV</a>  |  
+						<a href="/home/specialoffers/" alt="Special Offers" clicktrack="ctl|rsd|shop|cx|pre_id_learn|middle_high|link|special_offers">Special Offers</a></p>
+					</div>						
+				</div>
+				 
+				<script type="text/javascript">
+				
+				require(['jquery','centurycore','modals'],function(require){
+					/*$("#primary-offer").click(function(){
+						$("#hp-internetcx-btn").click();
+					});*/
+					$("#hp-internetcx-btn").click(function(e){e.stopPropagation();});
+					 
+					$("#secondary-offer-1").click(function(){
+						$("#btnInternetTabOnly").click();
+					});
+					$("#btnInternetTabOnly").click(function(e){e.stopPropagation();}); 
+					
+					$("#secondary-offer-2").click(function(){
+						$("#btnInternetTabBox2").click();
+					});
+					$("#btnInternetTabBox2").click(function(e){e.stopPropagation();}); 
+					
+					$("#secondary-offer-3").click(function(){
+						$("#btnInternetTabBox3").click();
+					});
+					$("#btnInternetTabBox3").click(function(e){e.stopPropagation();}); 
+					// we have binded modal-trigger with 'live' but event propagation (which used on internet pages) can't stop using live as already propagated to parent for live so adding bind and even 'on' is not supported earlier versions of jquery 1.7
+					$('a.modal-trigger').bind('click',$.centurycore.modals.onTriggerClick);
+				});
+
+				if(ttGeoLoc.custGroup == 'ENS'){
+					$('.plcDeets').html('Get <b>Fast Internet</b> for as little as <b>$45 a month.</b> Speeds up to 25 Mbps.');
+					$('.picAvailable').html('Get <b>Fast Internet</b> for as little as <b>$45 a month.</b><br>Speeds up to 25 Mbps.');
+				} 
+				</script>
+<noscript></noscript> 
+			<!-- end responsive main banner include file -->
+				
